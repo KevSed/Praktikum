@@ -1,7 +1,7 @@
 all: python latex
 
 python:
-	cd analysis && mkdir plots && python auswertung.py
+	cd analysis && mkdir -p plots && python auswertung.py
 
 latex: FORCE | build
 	@lualatex --halt-on-error --interaction=nonstopmode --output-directory=build --draftmode main.tex
